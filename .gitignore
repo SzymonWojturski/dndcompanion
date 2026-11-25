@@ -1,0 +1,11 @@
+node_modules
+dist
+*.log
+.env
+.env.*
+!.env.example
+api/data
+*.db
+*.db-wal
+*.db-shm
+.DS_Store

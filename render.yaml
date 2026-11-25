@@ -1,0 +1,23 @@
+# Render Blueprint: New > Blueprint > pick this repo.
+# Data lives in Turso (persistent), so Render's ephemeral disk does not matter.
+services:
+  - type: web
+    name: dndcompanion-api
+    runtime: node
+    plan: free
+    rootDir: api
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      # turso db show <name> --url   ->  libsql://<db>-<org>.turso.io
+      - key: TURSO_DATABASE_URL
+        sync: false
+      # turso db tokens create <name>
+      - key: TURSO_AUTH_TOKEN
+        sync: false
+      # GitHub Pages origin, e.g. https://<user>.github.io (comma-separated list allowed)
+      - key: CORS_ORIGIN
+        sync: false

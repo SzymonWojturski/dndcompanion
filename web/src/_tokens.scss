@@ -1,0 +1,18 @@
+// Shared design tokens for the Now or Never view.
+$font-display: 'Cinzel Decorative', serif;
+$font-caps: 'Cinzel', serif;
+$font-body: 'IM Fell English', Georgia, serif;
+
+// Clipped ("cut corner") panel silhouettes.
+$clip-lg: polygon(28px 0, 100% 0, 100% calc(100% - 28px), calc(100% - 28px) 100%, 0 100%, 0 28px);
+$clip-md: polygon(13px 0, 100% 0, 100% calc(100% - 13px), calc(100% - 13px) 100%, 0 100%, 0 13px);
+$clip-sm: polygon(14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%, 0 14px);
+$clip-tile: polygon(11px 0, 100% 0, 100% calc(100% - 11px), calc(100% - 11px) 100%, 0 100%, 0 11px);
+$clip-check: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+
+// Gradient edges reused by every framed surface.
+$edge-warm: linear-gradient(150deg, rgba(243, 213, 158, .5), rgba(196, 150, 255, .16) 55%, rgba(243, 213, 158, .34));
+$fill-tile: linear-gradient(165deg, rgba(52, 24, 76, .46), rgba(20, 8, 34, .56));
+
+$dur: 280ms;
+$ease: cubic-bezier(.2, 0, 0, 1);
